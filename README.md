@@ -1,34 +1,21 @@
-# Prefectural-Library-Loan-Best
-　和歌山県立図書館（本館・紀南分館）の年間貸出ランキング（平成２６年）です。
+# Prefectural-Library-Loan-Best API
+　和歌山県立図書館（本館・紀南分館）の年間貸出ランキング（平成２６年）をJSON API化したものです。
 
-###（GitHubアカウント「wakayama-pref-org」について）
+##エンドポイント
+
+|場所|書籍分類|API URL|
+|:--|:--|:--|
+|本館|一般|http://hideokamoto.github.io/Prefectural-Library-Loan-Best/v1/main/general.json
+|本館|児童書|http://hideokamoto.github.io/Prefectural-Library-Loan-Best/v1/main/children.json
+|紀南分館|一般|http://hideokamoto.github.io/Prefectural-Library-Loan-Best/v1/kinan/general.json
+|紀南分館|児童書|http://hideokamoto.github.io/Prefectural-Library-Loan-Best/v1/kinan/children.json
+
+## Deta Source（GitHubアカウント「wakayama-pref-org」について）
 　「wakayama-pref-org」は、オープンデータのニーズ把握や、技術者の方等との協働した地域課題の解決等のために和歌山県情報政策課が、試験的に運用しているものです。
 
-### （ライセンス）
+## LICENSE
 
 　掲載している各種データについては、
 [クリエイティブ・コモンズ・ライセンス表示4.0国際](https://creativecommons.org/licenses/by/4.0/deed.ja)
 ![クリエイティブ・コモンズ 表示 4.0 国際 ライセンス](https://licensebuttons.net/l/by/4.0/88x31.png)
 のもとでライセンスされています。
-
-### （免責）
-
-　「wakayama-pref-org」に掲載されるデータ使用、名称や内容等の改変や削除、サービスの停止等により、利用者及び第三者に生じた損害等については、和歌山県は一切責任を負いません。
-
-### （個別機能についての考え方）
-
-- Fork
-
-    　ご自由にしていただいて構いません。
-
-- Pull Request
-
-    　原則、県が公表しているデータの内容を変更しないPull RequestについてMergeし、内容の変更を伴うものや確認作業が膨大となるものについてはMergeしません。
-
-          マージする例）　文字コードの変換、ファイル名の変更　等
-          マージしない例）データの並び順を変更、データの中身を変更　等
-
-- Issue
-
-    　データのより良い公開方法等についてご意見があればお願いします。<br />
-    基本的に個別の返答は致しかねますが、いただいた意見はすべてに目を通し、今後の運営の参考にさせていただきます。
