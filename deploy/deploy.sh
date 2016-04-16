@@ -17,7 +17,7 @@ cp ../README.md ./
 
 git init
 git config user.name "Travis CI"
-git config user.email "miya+github.com@wpist.me"
+git config user.email "kokkoku214+github@gmail.com"
 git add v1
 git add README.md
 git commit --quiet -m "Deploy from travis"
