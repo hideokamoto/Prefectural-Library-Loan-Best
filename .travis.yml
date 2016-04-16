@@ -2,3 +2,15 @@ language: node_js
 node_js:
 - '0.11'
 - '0.10'
+branches:
+  only:
+  - master
+before_script: bash ./deploy/prepare.sh
+script:
+- ls -al deploy/v1/main/general.json
+- cat deploy/v1/main/general.json | jq .
+after_success: bash ./deploy/deploy.sh
+env:
+  global:
+  - GH_REF: git@github.com:hideokamoto/Prefectural-Library-Loan-Best.git
+  - secure: "JDvQ9XrW5WaHWQWa5ECXuWJmh1q/ZkxXip0HdMmDOA6ZMxQqs196nsr9D5nfYmYtqh3FWM8+FTnraj081d2gklECDqVcn9JqCOnMsvuWipihyCafIuKtI5ETeCr8hxWLWYWYiXZ9fQKMweaCs+aWjhGLMkvD/p5bqSTT2evYIsRkElnYjnqKh3HekYx3Q/qNLIjXSesFkdhLWXqfZvxb1Yjw+oShFl5Q0/qTpak8RpWpkvYcoURpi7wC9c2xPUj3i6/7A0xTWlW3YPvYSa5zQ4u8LYvF+CUBJErcRlwcfHOj6JCD6e7Atr2Le1vT7yLbXwweXQUnEtbz87cu5jITsfXPCXdUkHwzdUtP8oIkBL4KuGc3N17aWoTHDfxfF4goI9iTJO4DdlcgmOUVvh1Eud8q7mkq1C+U0HMoUcGPctv/ar0tpVLl/bn7wGNabEEsiMQPxq149xNhOUfEB1ON/0gr+LNP3WswZGkiULfA4dhmTfdCmfNtnRKNiypUB/CcV+0w0NXOrl4FfzfD+ubOkenLb5tPA06lmVyB95R+z7ldSsso546MnfwwGWCztkCbJM3lF29o9Hd+IrEzOjpxeD+PS72vARM0C3mgOuSVrWjnrXOFiapMasBamVsrlmJxaimkyhfcE3FhXsCuBAaOhGB0EQwZK6NNlRh6eil9I8o="
